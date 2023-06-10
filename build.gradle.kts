@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.21"
+    kotlin("plugin.serialization") version "1.5.31"
     application
 }
 
@@ -15,6 +16,8 @@ dependencies {
     implementation("io.ktor:ktor-server-core:1.6.4")
     implementation("io.ktor:ktor-server-netty:1.6.4")
     implementation("ch.qos.logback:logback-classic:1.2.6")
+    implementation("io.ktor:ktor-serialization:1.6.4")
+    implementation("io.ktor:ktor-html-builder:1.6.4")
     testImplementation(kotlin("test"))
 }
 
@@ -27,6 +30,5 @@ kotlin {
 }
 
 application {
-    mainClass.set("io.ktor.server.netty.EngineMain")
-    mainClass.set("MainKt")
+    mainClass.set("com.masdiq.ApplicationKt")
 }
